@@ -15,7 +15,7 @@
     overflow: scroll;
     @include respond-to(medium) {
         overflow: hidden;
-        width: 100%;
+        width: 92%;
         border-radius: 15px;
         height: 559px;
         &__header--photowrapper:hover{

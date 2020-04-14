@@ -21,7 +21,29 @@
             margin-top: 35px;
         }
         &--introduction {
+            @include respond-to(medium){
+                .intro-content {
+                    width:90%
+                }
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                h3 {
+                    color:black;
+                    font-size: 21px;
+                    #green-me {
+                        color:#2eca7f;
+                    }
+                }
+                p {
+                    line-height: 25px;
+                    color: #424242;
+                }
+            }
             @include respond-to(large){
+                .intro-content {
+                    width:90%
+                }
                 flex: 1;
                 display: flex;
                 flex-direction: column;
@@ -57,7 +79,6 @@
                 height: 24px;
                 margin-top: 5px;
             }
-
             .residence {
                 display: flex;
                 flex-direction: row;
@@ -73,7 +94,20 @@
                 #address-value {
                     margin-top: 5px;
                 }
-                @include respond-to(medium){
+            
+                @include respond-to(medium) {
+                    flex-direction: row;
+                    height: 40px;
+                    margin-top: 5px;
+                    .body-title {
+                        min-width:120px;
+                    }
+                    #address-value {
+                        margin-top: 0px;
+                        margin-left: 0px;
+                    }
+                }
+                @include respond-to(medium-large){
                     flex-direction: row;
                     height: 24px;
                     #address-value {

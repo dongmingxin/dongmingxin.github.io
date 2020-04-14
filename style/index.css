@@ -170,7 +170,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    max-width: 1031px;
     margin-bottom: 0px;
   }
 }
@@ -225,11 +225,35 @@ body {
     margin-top: 35px;
   }
 }
+@media screen and (min-width: 768px) {
+  .content__body--introduction {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .content__body--introduction .intro-content {
+    width: 90%;
+  }
+  .content__body--introduction h3 {
+    color: black;
+    font-size: 21px;
+  }
+  .content__body--introduction h3 #green-me {
+    color: #2eca7f;
+  }
+  .content__body--introduction p {
+    line-height: 25px;
+    color: #424242;
+  }
+}
 @media screen and (min-width: 1050px) {
   .content__body--introduction {
     flex: 1;
     display: flex;
     flex-direction: column;
+  }
+  .content__body--introduction .intro-content {
+    width: 90%;
   }
   .content__body--introduction h3 {
     color: black;
@@ -279,6 +303,20 @@ body {
   margin-top: 5px;
 }
 @media screen and (min-width: 768px) {
+  .content__body--detail .address {
+    flex-direction: row;
+    height: 40px;
+    margin-top: 5px;
+  }
+  .content__body--detail .address .body-title {
+    min-width: 120px;
+  }
+  .content__body--detail .address #address-value {
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+}
+@media screen and (min-width: 910px) {
   .content__body--detail .address {
     flex-direction: row;
     height: 24px;
@@ -336,7 +374,7 @@ body {
 @media screen and (min-width: 768px) {
   .content {
     overflow: hidden;
-    width: 100%;
+    width: 92%;
     border-radius: 15px;
     height: 559px;
   }
