@@ -1,0 +1,135 @@
+
+// navigation bar, navigation bar logo, navigation bar button
+
+@import "../utils/mixin.scss";
+.navbar {
+    @include box-shadow();
+    background-color:#2eca7f;
+    width: 100%;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    @include respond-to(large) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 100px;
+        background-color: transparent;
+        box-shadow: none;
+    }
+    &__logo {
+        margin-left: 20px;
+        font-size: 18px;
+        color: white;
+        font-weight: 500;
+        display: flex;
+        #green-lastname {
+            margin-left: 5px;
+        }
+        @include respond-to(large){
+            font-size: 20px;
+            color:#49515D;
+            margin-left: 0px;
+            #green-lastname {
+                color: #2eca7f;
+                margin-left: 8px;
+            }
+        }
+    }
+    &__link {
+        @include box-shadow();
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        right: 0px;
+        top: 45px;
+        height: 100%;
+        width: 85%;
+        background-color: #2eca7f;
+        transition:all .5s ease;
+        transform: translateX(100%);
+        @include respond-to(medium) {
+            transform: translateX(150%);
+        }
+        @include respond-to(large){
+            position:unset;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            background-color: transparent;
+            box-shadow: none;
+            transition:all 0s ease;
+            transform: translateX(0%);
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 400px;
+            } 
+        }
+        
+        ul {
+            text-align: center;
+            padding:0;
+            margin-top: 20px;
+            list-style: none;
+        }
+        li {
+            margin-top:25px;
+            @include respond-to(large) {
+                margin-top: 0px;
+            }
+        }
+        a {
+            text-decoration: none;
+            color:#ffffff;
+            opacity: 0.6;
+            position: relative;
+            @include respond-to(large) {
+                color:#49515D;
+                font-weight: bold;
+            }
+        }       
+    }
+
+    &__btn {
+        @include respond-to(large) {
+            display: none;
+        }
+        .fa-bars {
+            margin-right:20px;
+            color: white;
+            font-size: 22px;
+        }
+    }
+
+}
+
+.nav-btn-active {
+    transform: translateX(0%);
+}
+
+.navbar__link ul li :hover::before, .navbar__link ul li :active::before{
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    margin-left:25%;
+    width: 50%;
+    height: 3px;
+    background-color:#ffffff;
+    text-align: center;
+    @include respond-to(large) {
+        background-color: #2eca7f;
+    }
+}
+
+.navbar__link ul li a:hover, .navbar__link ul li a:active {
+    opacity: 1;
+}
+
+
+

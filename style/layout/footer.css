@@ -1,0 +1,26 @@
+#footer {
+  color: #9e9e9e;
+  font-size: 12px;
+  margin-top: 5px;
+  z-index: -1;
+}
+
+#footer a {
+  text-decoration: none;
+  color: #2eca7f;
+}
+
+@media screen and (min-width: 768px) {
+  #footer {
+    margin-top: -50px;
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  #footer {
+    margin-top: -50px;
+    position: relative;
+  }
+}
+/*# sourceMappingURL=footer.css.map */

@@ -1,0 +1,146 @@
+
+/*content header*/
+                                                            
+
+@import "../utils/mixin.scss";
+
+.content {
+    @include flex-column-center();
+    @include box-shadow();
+    width: 92%;
+    height: 100%;
+    margin-top: 25px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    overflow: scroll;
+    @include respond-to(medium) {
+        overflow: hidden;
+        width: 100%;
+        border-radius: 15px;
+        height: 559px;
+        &__header--photowrapper:hover{
+            transform: translateY(-10%);
+            transition:all .5s ease;
+            box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.1)
+        }
+    }
+    @include respond-to(large) {
+        overflow: hidden;
+        width: 100%;
+        border-radius: 15px;
+        height: 559px;
+        &__header--photowrapper:hover{
+            transform: translateY(-5%);
+            transition:all .5s ease;
+            box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.1)
+        }
+    }
+    &__header {
+        @include background-img-display();
+        @include flex-column-center();
+        width: 100%;
+        height: 473px;
+        background-color:#2eca7f;
+        background-image: url("/img/sp_main_bg.png");
+        @include respond-to(medium) {
+            display: flex;
+            flex-direction: row;
+            height: 230px;
+        }
+        
+        @include respond-to(large) {
+            display: flex;
+            flex-direction: row;
+            height: 306px;
+        }
+        &--photowrapper {
+            margin-top:50px;
+            height: 194px;
+            width: 194px;
+            border: 3px solid white;
+            @include respond-to(medium){
+                @include box-shadow();
+                height: 200px;
+                width: 200px;
+                margin-left: 50px;
+                margin-top: 70px;
+                img {
+                    width:100%;
+               }
+            }
+            @include respond-to(large){
+                @include box-shadow();
+                height: 274px;
+                width: 274px;
+                margin-left: 50px;
+                margin-top: 70px;
+                img {
+                    width:100%;
+               }
+            }
+            img {
+                 width:100%;
+            }
+        }
+        &--title {
+            @include flex-column-center();
+            @include respond-to(medium){
+                flex:2;
+                }
+                .name {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 25px;
+                    color:white;
+                    font-size: 44px;
+                    font-weight: bold;
+                    @include respond-to(medium) {
+                        margin-top: 50px;
+                        font: 54px monsterrat, Helvetica, sans-serif;
+                        font-weight: bold;
+                    }
+            }
+            @include respond-to(large){
+            flex:2;
+            }
+            .name {
+                display: flex;
+                justify-content: center;
+                margin-top: 25px;
+                color:white;
+                font-size: 44px;
+                font-weight: bold;
+                @include respond-to(large) {
+                    margin-top: 50px;
+                    font: 54px monsterrat, Helvetica, sans-serif;
+                    font-weight: bold;
+                }
+            }
+            .job {
+                margin-top: 20px;
+                color:white;
+                font-size: 18px;
+            }
+            
+            .social-link {
+                display: flex;
+                flex-direction: flex;
+                justify-content: space-between;
+                margin-top:20px;
+                margin-bottom: 50px;
+                width:120px;
+                .fa {
+                    background:white;
+                    color: gray;
+                    font-size: 15px;
+                    padding:10px;
+                    width:15px;
+                    text-align: center;
+                    text-decoration: none;
+                    border-radius: 50%;
+                }
+            }
+            
+        }
+    }
+}

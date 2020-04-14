@@ -1,0 +1,111 @@
+
+/*content body*/
+
+@import "../utils/mixin.scss";
+
+
+.content {
+    &__body{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        @include respond-to(medium) {
+            flex-direction: row;
+            width: 90%;
+            margin-top: 35px;
+        }
+        @include respond-to(large) {
+            flex-direction: row;
+            width: 90%;
+            margin-top: 35px;
+        }
+        &--introduction {
+            @include respond-to(large){
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                h3 {
+                    color:black;
+                    font-size: 21px;
+                    #green-me {
+                        color:#2eca7f;
+                    }
+                }
+                p {
+                    line-height: 25px;
+                    color: #424242;
+                }
+            }
+            h3 {
+                color:black;
+                font-size: 21px;
+                margin-bottom: 10px;
+                #green-me {
+                    color:#2eca7f;
+                }
+            }
+        }
+        &--detail {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            margin-top: 15px;
+            .age {
+                display: flex;
+                flex-direction: row;
+                height: 24px;
+                margin-top: 5px;
+            }
+
+            .residence {
+                display: flex;
+                flex-direction: row;
+                height: 24px;
+                margin-top: 5px;
+            }
+
+            .address {
+                display: flex;
+                flex-direction: column;
+                height: 50px;
+                margin-top: 5px;
+                #address-value {
+                    margin-top: 5px;
+                }
+                @include respond-to(large){
+                    flex-direction: row;
+                    height: 24px;
+                    #address-value {
+                        margin-top: 0px;
+                    }
+                }
+            }
+
+            .E-mail {
+                display: flex;
+                flex-direction: row;
+                height: 24px;
+                margin-top: 5px;
+                @include respond-to(large){
+                    flex-direction: row;
+                }
+            }
+
+            .phone {
+                display: flex;
+                flex-direction: row;
+                height: 24px;
+                margin-top: 5px;
+            }
+            
+            .body-title {
+                width:120px;
+            }
+
+            .body-value {
+                color:gray;
+            }
+        }
+    }
+}
