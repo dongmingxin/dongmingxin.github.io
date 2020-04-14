@@ -73,6 +73,13 @@
                 #address-value {
                     margin-top: 5px;
                 }
+                @include respond-to(medium){
+                    flex-direction: row;
+                    height: 24px;
+                    #address-value {
+                        margin-top: 0px;
+                    }
+                }
                 @include respond-to(large){
                     flex-direction: row;
                     height: 24px;
